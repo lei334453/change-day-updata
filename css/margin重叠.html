@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin重叠</title></title>
+
+    <style>
+
+        /* 同一初始包含块里相邻上下块级元素兄弟元素之间同时设置margin  会存在margin重叠的现象 */
+       /* 注意水平方向不存在種現象  margin-right: 50px;margin-left: 50px;  ===>margin   100 */
+         *{
+        margin:0;
+        padding:0;
+    }
+      html,body{
+        height: 100%;
+         width: 100%;
+      }
+    #app{
+        width: 100%;
+        border: 2px solid red;
+        /* display: flex; */
+        /* overflow: hidden; */
+    }
+    
+    #app .inner{
+        width: 200px;
+        height: 200px;
+        border: 1px solid green;
+        background-color:yellow;
+        margin-bottom:100px;
+        /* margin-right: 50px; */
+    }
+    #app .text{
+        width: 200px;
+        height: 200px;
+        border: 1px solid yellowgreen;
+        background-color:red;
+        margin-top: 100px;
+      /* margin-left: 50px; */
+    }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="inner"></div>
+        <div class="text"></div>
+      </div>
+</body>
+</html>

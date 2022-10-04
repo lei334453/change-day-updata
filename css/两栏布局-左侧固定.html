@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            height: 100%;
+        }
+        #app{
+            width: 100%;
+            height: 300px;
+            line-height: 300px;
+            border:1px solid red;
+            /* display: flex; */
+            /* overflow: hidden; */
+            position: relative;
+        }
+      /* 左侧固定 右侧自适应 */
+        /* #app .demo{
+        width: 200px;
+        height: 100%;
+        text-align: center;
+        float: left;
+        background-color: blue;
+        }
+
+        #app .demoright{
+            height: 100%;
+            text-align: center;
+            width: calc(100vw-200px);
+            background-color: aqua;
+        } */
+    /* 右侧固定 左侧自适应 */
+         #app .demo{
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            background-color: blue;
+            position:absolute;
+            right: 200px;
+            border: 1px solid black;
+        }
+
+        #app .demoright{
+            width: 200px;
+            top:0;
+            right: 0;
+            text-align: center;
+            background-color: aqua;
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="demo">
+            左侧
+        </div>
+        <div class="demoright">右侧</div>
+    </div>
+</body>
+</html>

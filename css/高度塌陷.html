@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+      html,body{
+        height: 100%;
+         width: 100%;
+      }
+    #app{
+        width: 100%;
+        border: 2px solid red;
+        /* 第一种 */
+        /* overflow: hidden; */
+        
+        /* zoom: 1; */
+    }
+    /* 第二种  多加了idv ==>多余结构*/
+        /* .aa {
+        display: block;
+        overflow: hidden;
+        content:"";
+        clear: both;
+        } */
+  /* 最终版本 */
+        /* #app::after {
+            content:"";
+            display: block;
+            visibility: hidden;
+            height:0px;
+            overflow: hidden;
+            clear: both;
+            
+        } */
+ #app::after {
+            content:"";
+            display: block;
+            visibility: hidden;
+            height:0px;
+            overflow: hidden;
+            clear: both;
+            
+        }
+
+    #app .inner{
+        width: 200px;
+        height: 200px;
+        float: left;
+        border: 1px solid green;
+        background-color:yellow;
+    }
+    #app .text{
+        width: 200px;
+        height: 200px;
+        float: left;
+        border: 1px solid yellowgreen;
+        background-color:red;
+    }
+</style>
+<body>
+  <div id="app">
+    <div class="inner"></div>
+    <div class="text"></div>
+    <!-- <div class="aa"></div> -->
+  </div>
+</body>
+</html>

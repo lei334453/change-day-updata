@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p {
+        animation-duration: 3s;
+        animation-name: slidein;
+        }
+
+        @keyframes slidein {
+        from {
+            margin-left: 30px;
+            width: 300%;
+        }
+        75% {
+            font-size: 300%;
+            margin-left: 25%;
+            width: 150%;
+            }
+        to {
+            margin-left: 100px;
+            width: 200px;
+          }
+        }
+        .wrapper{
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            grid-auto-rows: 200px;
+            /* grid-template-columns: repeat(3, 1fr); */
+            /* 一行三个 */
+            grid-column-gap: 10px;
+            grid-row-gap: 1em;
+            /* grid-auto-rows: minmax(100px, auto); 最小的100px */
+        }
+        .box1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.box2 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+    </style>
+</head>
+<body>
+    <p class="p">hello lei</p>
+    <div class="wrapper">
+        <div class="box1">One</div>
+        <div class="box2">Two
+            <p>I have some more content in.</p>
+            <p>This makes me taller than 100 pixels.</p>
+        </div>
+        <div class="box3">Three</div>
+        <div class="box4">Four</div>
+        <div class="box5">Five</div>
+        
+     </div>
+</body>
+</html>
